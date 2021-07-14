@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Красим таблицу</title>
+<style>
+table {
+border-collapse: separate;
+border: 1px solid #000;
+}
+th, td {
+border: 1px solid #000;
+text-align: center;
+}
+.index {
+background: blue;
+}
+.odd {
+background: yellow;
+}
+.even {
+background: grey;
+}
+.star {
+background: red;
+}
+.star + td {
+background: green;
+}
+.star + td + td {
+background: pink;
+}
+.even ~ .even {
+background: brown;
+}
+tr:nth-child(2) .index + td {
+background: violet;
+}
+</style>
+</head>
+<body>
+<h1>Наша таблица</h1>
+<table>
+<tr>
+<th class="index">№</th>
+<th>Левый столбец</th>
+<th>Средний столбец</th>
+<th>Правый столбец</th>
+<th>Ультраправый столбец</th>
+</tr>
+<tr>
+<td class="index">1</td>
+<td>ячейка 1</td>
+<td class="even">ячейка 2</td>
+<td class="odd">ячейка 3</td>
+<td class="even">ячейка 4</td>
+</tr>
+<tr>
+<td class="index">2</td>
+<td class="star">ячейка 5</td>
+<td class="odd">ячейка 6</td>
+<td>ячейка 7</td>
+<td class="even">ячейка 8</td>
+</tr>
+<tr>
+<td class="index">3</td>
+<td class="odd">ячейка 9</td>
+<td class="star">ячейка 10</td>
+<td>ячейка 11</td>
+<td class="odd">ячейка 12</td>
+</tr>
+<tr>
+<td class="index">4</td>
+<td>ячейка 13</td>
+<td>ячейка 14</td>
+<td class="odd star">ячейка 15</td>
+<td class="even">ячейка 16</td>
+</tr>
+</table>
+</body>
+</html>

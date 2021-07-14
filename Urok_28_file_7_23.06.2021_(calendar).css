@@ -1,0 +1,113 @@
+* {
+	margin: 0;
+	padding: 0;
+	font: normal 20px/30px Arial;
+	color: black;
+}
+h1 {
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 1;
+	color: red;
+	text-align: center;
+}
+p {
+	margin-top: 30px;
+	text-align: center;
+}
+input {
+	border: 1px solid blue;
+	padding: 5px;
+	width: 300px;
+	box-sizing: border-box;
+	text-align: center;
+}
+button {
+	border: none;
+	background: green;
+	color: white;
+	width: 300px;
+	border: 1px solid blue;
+	padding: 5px;
+	height: 50px;
+	cursor: pointer;
+}
+.birthday {
+	background: red;
+}
+.screen {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+	display: none;
+}
+.active {
+	display: block;
+}
+.modal {
+    position: absolute;
+    top: 150px;
+    width: 740px;
+    left: 50%;
+    margin-left: -391px;
+	padding: 20px;
+    text-align: center;
+    background: white;
+    border: 1px solid black;
+}
+.modal table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 5px;
+}
+.modal th {
+	height: 50px;
+	width: 100px;
+	box-sizing: border-box;
+	border: none;
+	font-weight: bold;
+}
+.modal td {
+	height: 100px;
+	width: 100px;
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+.modal .holiday {
+	border-color: red;
+	color: red;
+}
+.modal .noourmonth {
+	border-color: transparent;
+}
+.modal .today {
+	background: blue;
+	color: white;
+}
+.modal .birthday {
+	background: red;
+	color: white;
+}
+.modal .selected {
+	background: pink;
+	color: white;
+}
+.modal .workday:hover,
+.modal .holiday:hover {
+	background: green;
+	color: white;
+}
+.modal .header {
+	display: flex;
+	justify-content: space-between;
+}
+.modal .header span {
+	display: block;
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+	font-size: 30px;
+}

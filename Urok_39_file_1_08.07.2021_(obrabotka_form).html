@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Обработка формы</title>
+    <style>
+body {
+    margin: 0;
+    font: normal 16px/24px Arial;
+}
+    </style>
+    <script>
+document.addEventListener('click', function(e){
+    // по кнопке "отправить" собираем информацию из формы, превращаем ее в объект, переделываем в JSON и отправляем в консоль
+    // проверяем, что клик по нашей кнопке
+    if (e.target != document.querySelector('button')) return;
+    // собираем все поля формы, кладем свойствами/значениями в переменную-объект
+    let data = {
+        name: document.forms[0].name.value,
+        address: document.forms[0].address.value,
+        comment: document.forms[0].comment.value,
+        gender: document.forms[0].gender.value, // value радиокнопки равняется value чекнутой радиокнопки
+        age: document.forms[0].age.checked, // у чекбокса надежнее проверять значение checked
+        agree: document.forms[0].agree.checked
+    };
+    // отправляем собранные данные в консоль в виде JSON
+    console.log(JSON.stringify(data));
+});
+    </script>
+</head>
+<body>
+    <h1>Обработка формы</h1>
+    <form>
+        <fieldset>
+            <legend>Ваше имя</legend>
+            <input type="text" name="name">
+        </fieldset>
+        <fieldset>
+            <legend>Ваш адрес</legend>
+            <input type="text" name="address">
+        </fieldset>
+        <fieldset>
+            <legend>Ваш пол</legend>
+            <label><input type="radio" name="gender" value="М">мужской</label>
+            <label><input type="radio" name="gender" value="Ж">женский</label>
+        </fieldset>
+        <fieldset>
+            <legend>Ваш возраст</legend>
+            <label><input type="checkbox" name="age" value="yes">Мне больше 18 лет</label>
+        </fieldset>
+        <fieldset>
+            <legend>Ваше согласие</legend>
+            <label><input type="checkbox" name="agree" value="yes">Я согласен на обработку информации</label>
+        </fieldset>
+        <fieldset>
+            <legend>Комментарий</legend>
+            <textarea name="comment"></textarea>
+        </fieldset>
+        <button type="button">Отправить</button>
+    </form>
+</body>
+</html>

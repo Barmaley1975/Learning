@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.wrapper {
+background: yellow;
+}
+.header {
+background: red;
+height: 50px;
+}
+.footer {
+background: green;
+height: 50px;
+}
+.container {
+height: 500px;
+}
+.pseudo2 {
+color: blue;
+font: bold 20px Arial;
+background: url('plant.png') 20px center no-repeat;
+padding-left: 50px;
+}
+.pseudo {
+color: blue;
+font: bold 20px Arial;
+position: relative;
+margin-left: 50px;
+}
+.pseudo::after {
+content: "";
+position: absolute;
+left: -30px;
+top: 0;
+bottom: 0;
+width: 50px;
+background: url('plant.png') left center no-repeat;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="header"></div>
+<div class="container">
+
+<div class="pseudo">12345</div>
+<div class="pseudo2">12345</div>
+<div class="pseudo">12345</div>
+<div class="pseudo2">12345</div>
+qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty qwerty
+</div>
+<div class="footer"></div>
+</div>
+</body>
+</html>

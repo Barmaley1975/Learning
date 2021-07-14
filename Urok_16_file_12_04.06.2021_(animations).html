@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animations</title>
+<style>
+.container {
+border: 1px solid red;
+position: relative;
+text-align: center;
+margin: 50px;
+padding: 50px;
+min-height: 250px;
+}
+.zoo {
+width: 180px;
+height: 220px;
+position: absolute;
+animation: mouse 10s ease infinite;
+}
+.sign {
+
+}
+@keyframes mouse {
+from {
+left: 0;
+}
+to {
+left: auto;
+right: 0;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<img class="zoo" src="Urok_16_mylogo.png" alt="pic 1">
+<img class="sign" src="Urok_16_whirlpool.jpg" alt="pic 2">
+</div>
+</body>
+</html>
+

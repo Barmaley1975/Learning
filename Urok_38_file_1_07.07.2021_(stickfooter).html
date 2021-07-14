@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+header {
+    flex: none;
+    height: 100px;
+    background: green;
+}
+main {
+    flex: 1 0 auto;
+    background: yellow;
+}
+footer {
+    flex: none;
+    height: 100px;
+    background: red;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <header></header>
+        <main>
+            Минимальная высота у того контейнера, который мы сделаем вертикальным флексом - 100%. У всех его родителей до html включительно - высота 100%.
+        </main>
+        <footer></footer>
+    </div>
+    
+</body>
+</html>

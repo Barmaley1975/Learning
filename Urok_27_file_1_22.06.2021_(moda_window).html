@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery</title>
+	<link rel="stylesheet" href="Urok_27_file_1_22.06.2021_(modal_window).css">
+</head>
+<body>
+
+<ul>
+    <li><a href="#dialog" name="modal">Простое модальное окно</a></li>
+    <li><a href="#dialog1" name="modal">Форма для логина</a></li>
+    <li><a href="#dialog2" name="modal">Красивая липучка</a></li>
+    </ul>
+  
+<div id="boxes">  
+<div id="dialog" class="window"> 
+Простое модальное окно | 
+    <a href="#"class="close"/>Закрыть его</a>
+    </div>
+    
+    <!-- НАчало формы логина --> 
+    <div id="dialog1" class="window">
+  <div class="d-header">
+  <input type="text" value="username" onclick="this.value=''"/><br/>
+  <input type="password" value="Password" onclick="this.value=''"/> 
+  </div>
+  <div class="d-blank"></div>
+  <div class="d-login"><input type="image" alt="Login" title="Login" src="images/login-button.png"/></div>  
+</div>
+    <!-- конец -->   
+   
+<!-- Начало красивого стикера -->
+    <div id="dialog2" class="window">
+    Вот так все красиво!! <b>Ruseller.com</b> - всегда только лучшая информация<br/><br/>
+  <input type="button" value="НУ НАЖМИТЕ МЕНЯ!!!" class="close"/>
+  </div>
+  <!-- конец -->  
+   
+<!-- Маска, которая затемняет весь экран -->
+  <div id="mask"></div>
+
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script src="Urok_27_file_1_22.06.2021_(modal_window).js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Красим таблицу</title>
+<style>
+table {
+border-collapse: separate;
+border: 1px solid #000;
+}
+th, td {
+border: 1px solid #000;
+}
+.index {
+background: blue;
+}
+th {
+background: yellow;
+}
+td:nth-child(2) {
+background: green;
+}
+tr:nth-child(4) :nth-child(3),
+tr:last-child :last-child {
+background: brown;
+}
+/*
+tr:last-child:hover td {
+background: red;
+}
+*/
+tr:last-child td:hover {
+background: red;
+}
+</style>
+</head>
+<body>
+<h1>Наша таблица</h1>
+<table>
+<tr>
+<th class="index">№</th>
+<th>Левый столбец</th>
+<th>Средний столбец</th>
+<th>Правый столбец</th>
+</tr>
+<tr>
+<td class="index">1</td>
+<td>ячейка 1</td>
+<td>ячейка 2</td>
+<td>ячейка 3</td>
+</tr>
+<tr>
+<td class="index">2</td>
+<td>ячейка 4</td>
+<td>ячейка 5</td>
+<td>ячейка 6</td>
+</tr>
+<tr>
+<td class="index">3</td>
+<td>ячейка 7</td>
+<td>ячейка 8</td>
+<td>ячейка 9</td>
+</tr>
+<tr>
+<td class="index">4</td>
+<td>ячейка 10</td>
+<td>ячейка 11</td>
+<td>ячейка 12</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>AJAX demo</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $('.getajax').click(function(){
+                let data = $('.forajax').val(); // берем данные для отправки
+                $.ajax({
+                    method: 'POST', // метод отправки
+                    url: 'https://jsonplaceholder.typicode.com/posts', // адрес отправки
+                    data: data, // кладем наши данные
+                    success: function(data) { // при успехе, здесь data - данные не из запроса, а из ответа
+                        console.log(data); // выводим данные в консоль
+                        let str = ''
+                        for (let i in data) {
+                            str += i + ':' + data[i] + '<br>'
+                        }
+                        $('.ajaxhere').html(str); // выводим данные в страницу
+                    },
+                    error: function(err){ // при ошибке
+                        console.log(err); // выводим в консоль ошибку
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <form action='https://jsonplaceholder.typicode.com/posts' method="post">
+        <p>This is form & submit</p>
+        <input type="text" name="ourtext">
+        <button type="Submit">Submit!</button>
+    </form>
+    <div class="noform">
+        <p>There are no forms & submits</p>
+        <input class="forajax" type="text" name="anothertext">
+        <p class="getajax">Click here for AJAX</p>
+        <pre class="ajaxhere"></pre>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Семантика</title>
+<style>
+table {
+border-collapse: collapse;
+width: 100%;
+}
+td {
+height: 100px;
+width: 100px;
+}
+.header {
+background: pink;
+height: 200px;
+}
+.main {
+background: yellow;
+}
+.aside {
+background: green;
+height: 300px;
+}
+.article {
+height: 400px;
+}
+.footer {
+background: grey;
+height: 200px;
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td colspan="9" rowspan="2" class="header"></td>
+</tr>
+<tr></tr>
+<tr class="main">
+<td rowspan="3" class="aside">Колонка</td>
+<td rowspan="4" colspan="8" class="article">
+<h1 style="margin:0;">Семантические разделы страницы</h1>
+<p>Вот так оно устроено</p>
+</td>
+</tr>
+<tr class="main"></tr>
+<tr class="main"></tr>
+<tr class="main">
+<td></td>
+</tr>
+<tr>
+<td colspan="9" rowspan="2" class="footer"></td>
+</tr>
+<tr></tr>
+</table>
+</body>
+</html>

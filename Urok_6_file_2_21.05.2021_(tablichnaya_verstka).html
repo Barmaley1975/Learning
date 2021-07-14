@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Табличная верстка</title>
+<style>
+table {
+border-collapse: separate;
+border: 1px solid #000;
+}
+th, td {
+border: 1px solid #000;
+}
+.index {
+background: red;
+}
+tr:nth-child(2) :last-child {
+background: blue;;
+}
+.index + td {
+background: green;
+}
+</style>
+</head>
+<body>
+<h1>Наша таблица</h1>
+<table>
+<tr>
+<th class="index">№</th>
+<th>Левый столбец</th>
+<th>Средний столбец</th>
+<th>Правый столбец</th>
+</tr>
+<tr>
+<td class="index">1</td>
+<td rowspan="2" colspan="2">ячейка 1</td>
+<!-- td>ячейка 2</td -->
+<td rowspan="2">ячейка 3</td>
+</tr>
+<tr>
+<td class="index">2</td>
+<!-- td>ячейка 4</td -->
+<!-- td>ячейка 5</td -->
+<!-- td>ячейка 6</td -->
+</tr>
+<tr>
+<td class="index">3</td>
+<td colspan="2">ячейка 7</td>
+<!-- td>ячейка 8</td -->
+<td>ячейка 9</td>
+</tr>
+<tr>
+<td class="index">4</td>
+<td>ячейка 10</td>
+<td>ячейка 11</td>
+<td class="index">ячейка 12</td>
+</tr>
+</table>
+</body>
+</html>

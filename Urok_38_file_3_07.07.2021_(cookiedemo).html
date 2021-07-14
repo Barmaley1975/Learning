@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Cookie demo</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+function setCookie(name, value, expires) {
+    var expiresStr = '';
+    if (expires != 0) {
+        var d = new Date();
+        d.setTime(d.getTime() + expires * 1000);
+        expiresStr = ';expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + encodeURIComponent(value) + '; path=/' + expiresStr;
+}
+$(function(){
+    $('button').click(function(){
+        let data = {};
+        data.name = 'democookie_' + $('#name').val();
+        data.value = $('#value').val();
+        data.time = $('#time').val();
+        console.log(data);
+        setCookie(data.name, data.value, data.time);
+    })
+});
+    </script>
+</head>
+<body>
+    <p>Имя куки</p>
+    <input type="text" name="name" id="name">
+    <p>Значение куки</p>
+    <input type="text" name="value" id="value">
+    <p>Срок жизни куки</p>
+    <input type="text" name="time" id="time">
+    <p><button type="button">Установить</button></p>
+</body>
+</html>

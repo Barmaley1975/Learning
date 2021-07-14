@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>IfThenElse</title>
+<script>
+const WORD = 'пингвин';
+const POSTFIX = ['ов', 'а', ''];
+
+function tchislitelnoe(i) {
+let ctrl = i % 100;
+let point = 0;
+if ((ctrl % 10 == 1) && (ctrl != 11)) {
+point = 2;
+} else if ((ctrl % 10 == 2) && (ctrl != 12)) {
+point = 1;
+} else if ((ctrl % 10 == 3) && (ctrl != 13)) {
+point = 1;
+} else if ((ctrl % 10 == 4) && (ctrl != 14)) {
+point = 1;
+}
+return (i + ' ' + WORD + POSTFIX[point]);
+}
+
+do {
+num = prompt('Введите число');
+} while (isNaN(parseInt(num)));
+
+alert(tchislitelnoe(num));
+</script>
+</head>
+<body></body>
+</html>
